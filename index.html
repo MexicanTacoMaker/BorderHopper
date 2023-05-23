@@ -32,16 +32,55 @@
         <h1 class = "water">Water Cycle</h1>
         <ul>
             <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="africa.html">Condensation</a></li>
-            <li><a href="asia.html">Precipitation</a></li>
-            <li><a href="australia.html">Infiltration</a></li>
-            <li><a href="europe.html">Runoff</a></li>
-            <li><a href="northAmerica.html">Evapotranspiration</a></li>
+            <li><a href="condensation.html">Condensation</a></li>
+            <li><a href="precipitation.html">Precipitation</a></li>
+            <li><a href="infiltration.html">Infiltration</a></li>
+            <li><a href="runoff.html">Runoff</a></li>
+            <li><a href="evapotranspiration.html">Evapotranspiration</a></li>
 
         </ul>
-    
+        
+        <div class="image">
+            <br>
+            <button type="button" id="prev">Prev</button>
+            <img id="first-slide" src="https://www.kasandbox.org/programming-images/food/mushroom.png" width="400" alt="Mushrooms">
+            <button type="button" id="next">Next</button>
+            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+    var images = []
+        var slide = 0;
+        var slideShow = function() {
+            $("div.image #first-slide").hide();
+            $("div.image #first-slide").fadeIn(1200);
+        }
+        var nextButton = function() {
+            if (slide != (images.length - 1)) {
+                $("img").fadeOut(600)
+                $('img').attr('src', images[slide+1])
+                $("img").fadeIn(1200)
+                slide++;
+            }
+        };
+        
+        var prevButton = function() {
+            if (slide != 0) {
+                $("img").fadeOut(600)
+                $("img").attr('src', images[slide-1])
+                $("img").fadeIn(1200)
+                slide--;
+            }
+        };
     
+        $('div #next').on('click', function() {
+            nextButton();
+        })
+        
+        $('div #prev').on('click', function() {
+            prevButton();
+        })
+        
+        slideShow;
     
     </script>
     
