@@ -25,6 +25,15 @@
             body {
                 font-family: sans-serif;
                 }
+            div.text {
+                color:blue;
+                text-align: center; 
+                font-size: 2em;
+            }
+            img {
+                width: 50%;
+                image
+            }
         
         </style>
     </head>
@@ -32,23 +41,23 @@
         <h1 class = "water">Water Cycle</h1>
         <ul>
             <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="evaporation.html">Evaporation</a></li>
             <li><a href="condensation.html">Condensation</a></li>
             <li><a href="precipitation.html">Precipitation</a></li>
-            <li><a href="infiltration.html">Infiltration</a></li>
-            <li><a href="runoff.html">Runoff</a></li>
-            <li><a href="evapotranspiration.html">Evapotranspiration</a></li>
+            <li><a href="collection.html">Collection</a></li>
 
         </ul>
         
         <div class="image">
             <br>
             <button type="button" id="prev">Prev</button>
-            <img id="first-slide" src="https://www.kasandbox.org/programming-images/food/mushroom.png" width="400" alt="Mushrooms">
+            <img id="first-slide" src="noemie-cauchon-5QefmfNlUdQ-unsplash.jpg" width="400">
             <button type="button" id="next">Next</button>
+            <div class="text">Evaporation</div>
             </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-    var images = []
+    var images = ["noemie-cauchon-5QefmfNlUdQ-unsplash.jpg", "water-g4e82d0b26_1280.jpg", "alejandro-iovdR-SxMj0-unsplash.jpg", "GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg"]
         var slide = 0;
         var slideShow = function() {
             $("div.image #first-slide").hide();
@@ -81,6 +90,7 @@
         })
         
         slideShow;
+    
     
     </script>
     
